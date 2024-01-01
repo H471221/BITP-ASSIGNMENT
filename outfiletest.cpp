@@ -1,6 +1,6 @@
 #include <iostream>
-#include <fstream>
-#include <iomanip>
+#include <fstream> //to use file output function
+#include <iomanip> //to use function fixed << setprecision
 using namespace std;
  struct VendItem {
     char Drink_name[20];  // Max drink name
@@ -10,7 +10,6 @@ using namespace std;
 
 int main()
 {
-   
 
 VendItem items[15];
 
@@ -29,9 +28,10 @@ items[12] = { "Apple Juice", 2.50, 10 };
 items[13] = { "Orange Juice", 2.50, 10 };
 items[14] = { "Guava Juice", 2.50, 10 };
 
-    items[1].Drink_quantity--;
+    double total_earned = 75.50;
+    ofstream outfile("output.dat");// default mode is ios::out
+    outfile<<"Name = "<<items[1].Drink_name<<endl<<"Total earned = "<<fixed<<setprecision(2)<<total_earned<<endl;
+    //must have total drinks sold, total money earned, quantity of drink not sold, 
+    outfile.close();
 
-    for(int i=1; i<=14; i++){
-        cout << fixed << setprecision(2) <<"Drink "<< i << " " << items[i].Drink_name << " RM" << items[i].Drink_price << " " << items[i].Drink_quantity << " " << endl;
-    }
 }
