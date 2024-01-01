@@ -12,29 +12,40 @@ int main()
 {
    
 
-VendItem items[20];
+VendItem items[15];
 
+items[0] = { "Cola", 2.50, 10 };
+items[1] = { "Rootbeer", 1.50, 10 };
+items[2] = { "Lemon-lime", 1.50, 10 };
+items[3] = { "Strawberry", 1.50, 10 };
+items[4] = { "Mountain Dew", 1.50, 10 };
+items[5] = { "Mirinda Orange", 1.50, 10 };
+items[6] = { "Pepsi", 1.50, 10 };
+items[7] = { "Lemon Tea", 2.00, 10 };
+items[8] = { "Grape Soda", 2.00, 10 };
+items[9] = { "Ice Cream Soda", 2.00, 10 };
+items[10] = { "Milo", 2.00, 10 };
+items[11] = { "Apple Juice", 2.50, 10 };
+items[12] = { "Orange Juice", 2.50, 10 };
+items[13] = { "Guava Juice", 2.50, 10 };
 
+/* 
 items[1] = { "Cola", 1.50, 10 };
 items[2] = { "Rootbeer", 1.50, 10 };
 items[3] = { "Lemon-lime", 1.50, 10 };
 items[4] = { "Strawberry", 1.50, 10 };
-items[5] = { "Mountain Dew", 0.80, 10 };
-items[6] = { "Mirinda Orange", 0.75, 10 };
-items[7] = { "Pepsi", 0.75, 10 };
-items[8] = { "Lemon Tea", 0.75, 10 };
-items[9] = { "Grape Soda", 0.80, 10 };
-items[10] = { "Ice Cream Soda", 0.80, 10 };
-items[11] = { "Milo", 0.75, 10 };
-items[12] = { "Apple Juice", 0.75, 10 };
-items[13] = { "Orange Juice", 0.75, 10 };
-items[14] = { "Guava Juice", 0.80, 10 };
-
-cout << "Cola Price: " << items[0].price << " This struct member display the drink price for cola" << endl;
-cout << "Cola Price: " << items[0].price << " This struct member display the drink price for cola" << endl;
-cout << "Whitespaces char test: " << items[4].name << " This struct member display the drink with whitespaces" << endl;
-
-    for(int i=1; i<=14; i++){
-        cout << "Drink "<< i <<" "<< items[i].name << fixed <<" RM"<< items[i].price <<" "<< items[i].quantity <<" "<< setprecision(2) << endl;
+items[5] = { "Mountain Dew", 1.50, 10 };
+items[6] = { "Mirinda Orange", 1.50, 10 };
+items[7] = { "Pepsi", 1.50, 10 };
+items[8] = { "Lemon Tea", 2.00, 10 };
+items[9] = { "Grape Soda", 2.00, 10 };
+items[10] = { "Ice Cream Soda", 2.00, 10 };
+items[11] = { "Milo", 2.00, 10 };
+items[12] = { "Apple Juice", 2.50, 10 };
+items[13] = { "Orange Juice", 2.50, 10 };
+items[14] = { "Guava Juice", 2.50, 10 };
+*/
+    for(int i=0; i<=14; i++){
+        cout << fixed << "Drink "<< i << " " << items[i].name << " RM" << items[i].price << setprecision(2) << " " << items[i].quantity << " " << endl;
     }
 }
