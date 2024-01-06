@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <iomanip>
+#include <string>
 using namespace std;
  struct VendItem {
     char Drink_name[20];  // Max drink name
@@ -10,7 +11,6 @@ using namespace std;
 
 int main()
 {
-   
 
 VendItem items[15];
 
@@ -33,5 +33,10 @@ items[14] = { "Guava Juice", 2.50, 10 };
 
     for(int i=1; i<=14; i++){
         cout << fixed << setprecision(2) <<"Drink "<< i << " " << items[i].Drink_name << " RM" << items[i].Drink_price << " " << items[i].Drink_quantity << " " << endl;
-    }
+   }
+   int drink_selected;
+   cout << "Select a drink: ";
+   cin >> drink_selected;
+   if (drink_selected == 1 && items->Drink_quantity )
+        cout<<"complete selection 1";
 }

@@ -18,6 +18,7 @@ struct VendItem
 
 int main()
 {
+    int drink_selected;
     VendItem items[15];
 
     items[1] = {"Cola", 1.50, 10};
@@ -26,7 +27,7 @@ int main()
     items[4] = {"Strawberry", 1.50, 7};
     items[5] = {"Mountain Dew", 1.50, 6};
     items[6] = {"Mirinda Orange", 1.50, 5};
-    items[7] = {"Pepsi", 1.50, 4};
+    items[7] = {"Pepsi", 1.50, 0};
     items[8] = {"Lemon Tea", 2.00, 3};
     items[9] = {"Grape Soda", 2.00, 2};
     items[10] = {"Ice Cream Soda", 2.00, 1};
@@ -34,9 +35,9 @@ int main()
     items[12] = {"Apple Juice", 2.50, 5};
     items[13] = {"Orange Juice", 2.50, 5};
     items[14] = {"Guava Juice", 2.50, 4};
-cout<<"                        UTeM Vending Machine             \n  "
+       cout<<"                        UTeM Vending Machine             \n  "
             "\t|-----------------------------------------------|\n"
-            "\t|  Drink Name\t|     Cost(RM)  |    Quantity\t|\n "  
+            "\t|Drink Name\t|   Cost(RM)    |    Quantity\t|\n "  
             "\t|-----------------------------------------------|\n"
             "\t|Coca-Cola\t|\t1.50  \t|\t"<<items[1].Drink_quantity<<"\t|\n " 
             "\t|-----------------------------------------------|\n"
@@ -89,5 +90,28 @@ cout<<"                        UTeM Vending Machine             \n  "
     }
     // must have total drinks sold, total money earned, quantity of drink not sold,
     outfile.close();
-    return 0;
+
+    char decision;
+    do  { 
+        jump:
+        cout << "Enter drink code ";
+        cin >> drink_selected;
+        if(items[drink_selected].Drink_quantity == 0){
+            cout << "Sorry! drink sold out\n";
+            continue; 
+        }
+        else
+            cout << "Are you sure?";
+            cin >> decision;
+        if (decision == 'Y'){
+            break;
+        }
+        else if (decision == 'N'){
+            goto jump;
+        }
+    }
+    while(items[drink_selected].Drink_quantity == 0);
+    cout << drink_selected;
+    cout << "Enter money: ";
 }
+
