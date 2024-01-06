@@ -97,16 +97,16 @@ int main()
         cout << "Enter drink code ";
         cin >> drink_selected;
         if(items[drink_selected].Drink_quantity == 0){
-            cout << "Sorry! drink sold out\n";
+            cout << "Sorry! drink sold out please choose another drink\n";
             continue; 
         }
         else
             cout << "Are you sure?";
             cin >> decision;
-        if (decision == 'Y'){
+        if (decision == 'Y' || decision == 'y'){
             break;
         }
-        else if (decision == 'N'){
+        else if (decision == 'N' || decision == 'n'){
             goto jump;
         }
     }
