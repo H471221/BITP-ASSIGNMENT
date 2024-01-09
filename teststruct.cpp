@@ -39,4 +39,5 @@ items[14] = { "Guava Juice", 2.50, 10 };
    cin >> drink_selected;
    if (drink_selected == 1 && items->Drink_quantity )
         cout<<"complete selection 1";
+    
 }
