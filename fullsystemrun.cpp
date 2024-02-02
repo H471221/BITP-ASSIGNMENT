@@ -107,10 +107,9 @@ int main()
     outfile.close();
 ////////////DO NOT CROSS/////////// WORK IN PROGRESS /////DO NOT CROSS//////////////////////////////////////////*/ 
     
-//zaini buatkan function kat sini 
     do  { 
         jump:
-        cout << "Select a drink(1-14) :";
+        cout << "Select a drink(1-14, 0 to exit) :";
         cin >> drink_selected;
         if(items[drink_selected].Drink_quantity == 0){
             cout << "Sorry! drink sold out please choose another drink\n";
@@ -118,7 +117,7 @@ int main()
         }
         else if(drink_selected == 0){
             cout << "Beginning maintenance mode..." << endl;
-            break;
+            
         }
         else
             cout << "Are you sure? (Y to continue/ N to cancel): ";
